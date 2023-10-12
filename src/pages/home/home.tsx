@@ -1,16 +1,16 @@
-
+import style from "./home.module.css";
 
 const Home = () => {
   return (
     <>
-    <div>home</div>
-    <p>Funciona hpt</p>
+      <main className={style.main}>
+        <div>home</div>
+        <p>Funciona hpt</p>
 
-    <a href="/si">asdasfd</a>
-
-    <p>Moisés Es Bien Gei</p>
+        <a href="/si">asdasfd</a>
+      </main>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

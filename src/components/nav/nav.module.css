@@ -1,0 +1,26 @@
+.main{
+    height: 100%;
+    width: 100;
+    background-color: transparent;
+}
+.sectionUp{
+    display: flex;
+    justify-content: space-around;
+    height: fit-content;
+    width: 100%;
+}
+.contactNumbers{
+    background-color: rgb(255, 255, 255);
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+}
+.PrincipalImg{
+    height: 30%;
+    width: 10%;
+    border-radius: 20%;
+}
