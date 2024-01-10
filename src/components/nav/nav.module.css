@@ -1,26 +1,81 @@
-.main{
-    height: 100%;
-    width: 100;
-    background-color: transparent;
-}
-.sectionUp{
+.nav{
+    background: #171c24;
     display: flex;
-    justify-content: space-around;
-    height: fit-content;
-    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row; /* Change this from column to row */
+    height: 80px;
 }
-.contactNumbers{
-    background-color: rgb(255, 255, 255);
-    height: fit-content;
-    width: fit-content;
+.nav form{
     display: flex;
+    height: 40px;
+    padding: 2px;
+    background: #1e232b;
+    min-width: 18%!important;
+    border-radius: 2px;
+    border: 1px solid rgba(155, 155, 155, 0);
+}
+.nav .logo{
+    height: 120%;
+    width: 22%;
+    border-radius: 20%;
+    text-align: center;
+}
+.nav ul {
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row;
-    gap: 2rem;
+    list-style-type: none; /* Removes the bullet points */
 }
-.PrincipalImg{
-    height: 30%;
-    width: 10%;
-    border-radius: 20%;
+.nav ul li {
+    margin-right: 20px; /* Adds some space to the right of each link */
+}
+.nav a{
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+}
+nav ul li a {
+    transition: color 0.2s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #ff0000; /* Change to the color you want when hovering */
+    cursor: pointer;
+
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+    transition:  0.5s ease-in-out;
+  }
+
+.dropdown ul{
+    display: none;
+    position: absolute;
+    background-color: #171c24;
+    min-width: fit-content;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    opacity: 0; /* Start with the dropdown menu invisible */
+    transition: opacity 0.2s ease-in-out; /* Add a transition on the opacity */
+    text-align: center;
+
+}
+
+.dropdown:hover ul {
+    display: block;
+    opacity: 1; /* Make the dropdown menu visible when hovering */
+}
+.userIcon{
+    color: #fff;
+    font-size: 2rem;
+    transition: color 0.2 ease-in-out;
+}
+.userIcon:hover{
+    color: #ff0000;
+    opacity: 1;
 }
