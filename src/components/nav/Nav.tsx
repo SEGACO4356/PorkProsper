@@ -7,24 +7,20 @@ const Nav = () => {
   return (
     <main>
       <nav className={style.nav}>
-        <ul>
-          <li>
+        <ul className={style.ulPrincipal}>
+           <li className={style.dropdown}>
             <a href="/"><p className={style.pPork}>Pork<span className={style.spanProsper}>Prosper</span></p></a>
           </li>
-        </ul>
-        <ul>
           <li className={style.dropdown}>
           <DropDownItem text={"Redes"} />
 
           </li>
-          <li className={style.logo}>
+          <li className={style.dropdown}>
             <img src={PrincipalImg} alt="" className={style.logo}/>
           </li>
           <li className={style.dropdown}>
             <DropDownItem text={"Contacto"} />
           </li>
-        </ul>
-        <ul >
           <li className={style.dropdown}>
             <span className={style.userIcon}><FaUserCircle /></span>
           </li>
@@ -51,8 +47,8 @@ const DropDownItem = (props: any) => {
         <a>{props.text}</a>
         {isOpen && (
           <ul>
-            <li><a href="" onClick={openFacebook}>Facebook</a></li>
-            <li><a href="" onClick={openInstagram}>Instagram</a></li>
+            <li className={style.dropdownItem}><a href="" onClick={openFacebook}>Facebook</a></li>
+            <li className={style.dropdownItem}><a href="" onClick={openInstagram}>Instagram</a></li>
           </ul>
         )}
       </div>
@@ -65,7 +61,7 @@ const DropDownItem = (props: any) => {
       <a>{props.text}</a>
       {isOpen && (
         <ul>
-          <li><a href="#">+57 123456789</a></li>
+          <li className={style.dropdownItem}><a href="#">+57 123456789</a></li>
         </ul>
       )}
     </div>

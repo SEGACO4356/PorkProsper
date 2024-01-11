@@ -7,33 +7,32 @@
     align-items: center;
     justify-content: space-evenly;
     flex-direction: row; /* Change this from column to row */
-    height: 80px;
-}
-.nav form{
-    display: flex;
-    height: 40px;
-    padding: 2px;
-    background: #1e232b;
-    min-width: 18%!important;
-    border-radius: 2px;
-    border: 1px solid rgba(155, 155, 155, 0);
+    padding: 0;
+    margin: 0;
 }
 .nav .logo{
-    height: 120%;
-    width: 22%;
+    height: 70px;
+    width: 20%;
     border-radius: 20%;
     text-align: center;
+    justify-content: center;
+}
+.nav ul li{
+    width: 20%;
 }
 .nav ul {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     list-style-type: none; /* Removes the bullet points */
+    padding: 0%;
+    width: 80%;
 }
-.nav ul li {
-    margin-right: 20px; /* Adds some space to the right of each link */
+.ulPrincipal{
+    width: 100%;
 }
+
 .nav a{
     color: #fff;
     text-decoration: none;
@@ -71,6 +70,9 @@ nav ul li a:hover {
 .dropdown:hover ul {
     display: block;
     opacity: 1; /* Make the dropdown menu visible when hovering */
+}
+.dropdownItem{
+    width: 20%;
 }
 .userIcon{
     color: #fff;

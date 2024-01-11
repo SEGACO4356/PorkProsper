@@ -4,9 +4,27 @@
     background-color: #171c24;
     padding-top: 2rem;
 }
+.title{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    user-select: none;
+
+    font-size: 1.5rem;
+    color: white;
+    text-align: center center justify;
+    text-justify: distribute-all-lines;
+    margin-left: 1rem;
+    padding: 1rem;
+}
+.initialDivisor{
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+}
 .principaltext{
     user-select: none;
-    width: 10%;
+    width: 100%;
     font-size: 1rem;
     color: white;
     text-align: start left justify;
@@ -14,11 +32,11 @@
     margin-left: 1rem;
     padding: 1rem;
 }
-.primerCerdo{
+.primerCerdoImg{
 
     user-select: none;
-    height: 20%;
-    width: 13%;
+    height: 40%;
+    width: 30%;
     font-size: 1rem;
     color: white;
     text-align: start left justify;
@@ -28,8 +46,29 @@
 .firstContainer{
     display: flex;
     flex-direction: row;
-    justify-content: stretch;
+    justify-content: space-between;
     align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.containerSon{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+.containerSonTwo{
+    display: flex;
     height: 50%;
     width: 100%;
+}
+.secondText{
+    user-select: none;
+    width: 100%;
+    font-size: 1rem;
+    color: white;
+    text-align: start center justify;
+    text-justify: distribute-all-lines;
+    margin-left: 1rem;
+    padding: 1rem;
 }
