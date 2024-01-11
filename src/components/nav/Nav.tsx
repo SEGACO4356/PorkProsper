@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import PrincipalImg from '../../assets/PorkProsper.png'; // replace with your actual image path
 import style from './nav.module.css';
-import { FaUserCircle  } from 'react-icons/fa';
+import { FaUserCircle } from 'react-icons/fa';
 
 const Nav = () => {
   return (
@@ -9,16 +9,16 @@ const Nav = () => {
       <nav className={style.nav}>
         <ul>
           <li>
-            <a href="/"><p className={style.pPork}>Pork<span className={style.spanProsper}>Prosper</span></p></a>
+              <PorkProsper />
           </li>
         </ul>
         <ul>
           <li className={style.dropdown}>
-          <DropDownItem text={"Redes"} />
+            <DropDownItem text={"Redes"} />
 
           </li>
           <li className={style.logo}>
-            <img src={PrincipalImg} alt="" className={style.logo}/>
+            <img src={PrincipalImg} alt="" className={style.logo} />
           </li>
           <li className={style.dropdown}>
             <DropDownItem text={"Contacto"} />
@@ -33,7 +33,30 @@ const Nav = () => {
     </main>
   );
 };
+const PorkProsper = () => {
+  const [isHoveredPork, setIsHoveredPork] = useState(false);
+  const [isHoveredProsper, setIsHoveredProsper] = useState(false);
 
+  return (
+    <span>
+      <span className={style.pork}
+        onMouseEnter={() => setIsHoveredPork(true)}
+        onMouseLeave={() => setIsHoveredPork(false)}
+        style={{ color: isHoveredPork ? 'red' : 'white' }}
+      >
+        Pork
+      </span>
+      <span
+      className={style.prosper}
+        onMouseEnter={() => setIsHoveredProsper(true)}
+        onMouseLeave={() => setIsHoveredProsper(false)}
+        style={{ color: isHoveredProsper ? 'white' : 'red' }}
+      >
+        Prosper
+      </span>
+    </span>
+  );
+};
 
 const DropDownItem = (props: any) => {
 
@@ -60,7 +83,7 @@ const DropDownItem = (props: any) => {
   }
 
   return (
-    
+
     <div onMouseEnter={() => setIsOpen(true)} onMouseLeave={() => setIsOpen(false)}>
       <a>{props.text}</a>
       {isOpen && (

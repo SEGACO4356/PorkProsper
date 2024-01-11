@@ -95,4 +95,27 @@ nav ul li a:hover {
 }
 .pPork{
     font-size: 1.5rem;
+    color: #fff;
+    transition: color 0.2 ease-in-out;
+}
+.pPork:hover{
+    color: #ff0000;
+    opacity: 1;
+}
+.aPorkProsper{
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.2 ease-in-out;
+}
+.pork{
+    transition: all 0.2s ease-in-out;
+}
+.pork:hover{
+    font-size: 1.5rem;
+}
+.prosper{
+    transition: all 0.2s ease-in-out;
+}
+.prosper:hover{
+    font-size: 1.5rem;
 }
