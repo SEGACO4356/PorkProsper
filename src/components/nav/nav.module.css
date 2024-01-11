@@ -1,4 +1,6 @@
 .nav{
+    height: 100%;
+    width: 100%;
     background: #171c24;
     display: flex;
     flex-wrap: wrap;
@@ -78,4 +80,19 @@ nav ul li a:hover {
 .userIcon:hover{
     color: #ff0000;
     opacity: 1;
+}
+.dropdowntext{
+    color: #fff;
+    font-size: 1.2rem;
+    transition: color 0.2 ease-in-out;
+}
+.spanProsper{
+    color: #ff0000;
+    transition: color 0.2 ease-in-out;
+}
+.spanProsper:hover{
+    color: #fff;
+}
+.pPork{
+    font-size: 1.5rem;
 }

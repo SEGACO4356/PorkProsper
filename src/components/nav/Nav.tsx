@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import PrincipalImg from '../../css/PorkProsper.png'; // replace with your actual image path
+import PrincipalImg from '../../assets/PorkProsper.png'; // replace with your actual image path
 import style from './nav.module.css';
 import { FaUserCircle  } from 'react-icons/fa';
 
@@ -9,7 +9,7 @@ const Nav = () => {
       <nav className={style.nav}>
         <ul>
           <li>
-            <a href="/">Inicio</a>
+            <a href="/"><p className={style.pPork}>Pork<span className={style.spanProsper}>Prosper</span></p></a>
           </li>
         </ul>
         <ul>
