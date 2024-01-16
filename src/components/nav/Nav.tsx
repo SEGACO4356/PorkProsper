@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import style from './nav.module.css';
-import { FaUserCircle } from 'react-icons/fa';
-
+import { Link } from 'react-router-dom';
 const Nav = () => {
   return (
     <main>
@@ -9,11 +8,11 @@ const Nav = () => {
         <ul className={style.ulPrincipal}>
           <div className={style.firstContainerPork}>
           <h1 className={style.title}>
-            <PorkProsper /> 
+            <Link to="/"><PorkProsper /> </Link>
           </h1>
           </div>
-           <li>
-
+           <li className={style.dropdown}>
+            <DropDownItem text={"Categorias"} />
            </li>
           <li className={style.dropdown}>
             <DropDownItem text={"Redes"} />
@@ -24,7 +23,7 @@ const Nav = () => {
             <DropDownItem text={"Contacto"} />
           </li>
           <li className={style.dropdown}>
-            <span className={style.userIcon}><FaUserCircle /></span>
+            <DropDownItem text={"Usuarios"} />
           </li>
         </ul>
       </nav>
@@ -57,13 +56,6 @@ const PorkProsper = () => {
 };
 
 const DropDownItem = (props: any) => {
-
-  const openFacebook = () => {
-    window.open("https://www.facebook.com", "_blank");
-  }
-  const openInstagram = () => {
-    window.open("https://www.instagram.com", "_blank");
-  }
   const [isOpen, setIsOpen] = useState(false);
 
   if (props.text === "Redes") {
@@ -72,8 +64,8 @@ const DropDownItem = (props: any) => {
         <a>{props.text}</a>
         {isOpen && (
           <ul>
-            <li className={style.dropdownItem}><a href="" onClick={openFacebook}>Facebook</a></li>
-            <li className={style.dropdownItem}><a href="" onClick={openInstagram}>Instagram</a></li>
+            <li className={style.dropdownItem}><Link to="https://www.facebook.com" target='_blank'>Facebook</Link></li>
+            <li className={style.dropdownItem}><Link to="https://www.instagram.com" target='_blank'>Instagram</Link></li>
           </ul>
         )}
       </div>
@@ -85,13 +77,25 @@ const DropDownItem = (props: any) => {
         <a>{props.text}</a>
         {isOpen && (
           <ul>
-            <li className={style.dropdownItem}><a href="" onClick={openFacebook}>Categorias</a></li>
+            <li className={style.dropdownItem}><a href="">Categorias</a></li>
           </ul>
         )}
       </div>
     );
   }
-
+  else if (props.text === "Usuarios") {
+    return (
+      <div onMouseEnter={() => setIsOpen(true)} onMouseLeave={() => setIsOpen(false)}>
+        <a>{props.text}</a>
+        {isOpen && (
+          <ul>
+            <li className={style.dropdownItem}><Link to="/users">Ver Usuarios</Link></li>
+            <li className={style.dropdownItem}><Link to="/create-user">Crear Usuario</Link></li>
+          </ul>
+        )}
+      </div>
+    );
+  }
   return (
 
     <div onMouseEnter={() => setIsOpen(true)} onMouseLeave={() => setIsOpen(false)}>

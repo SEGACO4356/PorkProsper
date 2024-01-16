@@ -44,31 +44,46 @@ nav ul li a:hover {
 }
 .dropdown {
     position: relative;
-    display: inline-block;
+    display:  flex;
+    justify-content: center;
+    align-items: center;
     transition:  0.5s ease-in-out;
   }
 
-.dropdown ul{
+.dropdown ul {
     display: none;
     position: absolute;
-    background-color: #171c24;
-    min-width: fit-content;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
+    background-color: transparent;
+    width: fit-content;
+    height: auto; /* Change this from 100% to auto */
     z-index: 1;
-    opacity: 0; /* Start with the dropdown menu invisible */
-    transition: opacity 0.2s ease-in-out; /* Add a transition on the opacity */
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
     text-align: center;
-
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .dropdown:hover ul {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: fit-content;
-    opacity: 1; /* Make the dropdown menu visible when hovering */
+    gap: 0.5rem;
+    padding-top: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    height: auto; /* Change this from 100% to auto */
+    background-color: #171c24;
+    box-shadow: 10px 10px 5px 0px black;
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
 }
 .dropdownItem{
-    width: 20%;
+    width: fit-content;
+    padding: 0%;
+    margin: 0;
 }
 .userIcon{
     color: #fff;
