@@ -28,6 +28,9 @@
     font-size: 1rem;
     color: white;
     text-align: start left justify;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     text-justify: distribute-all-lines;
     margin-left: 1rem;
     padding: 1rem;
@@ -35,8 +38,8 @@
 .primerCerdoImg{
 
     user-select: none;
-    height: 40%;
-    width: 30%;
+    height: 20%;
+    width: 20%;
     font-size: 1rem;
     color: white;
     text-align: start left justify;
@@ -53,12 +56,23 @@
 }
 .containerSon{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
     height: 100%;
+    background-color: #6e0000;
+    border: 1px solid black;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 1px 1px 1px 0px black;
+}
+.containerSon p{
+    display: flex;
+    flex-direction: column;
 }
 .containerSonTwo{
+    padding-top: 1rem;
     display: flex;
+    justify-content: space-around;
     height: 50%;
     width: 100%;
 }
@@ -71,4 +85,20 @@
     text-justify: distribute-all-lines;
     margin-left: 1rem;
     padding: 1rem;
+}
+.secondPigImg{
+
+    user-select: none;
+    height: 20%;
+    width: 20%;
+    font-size: 1rem;
+    color: white;
+    text-align: start left justify;
+    margin-left: 1rem;
+    padding-left: 20rem;
+}
+hr {
+    border: none;
+    height: 1px;
+    background: transparent; /* Cambia esto al color que quieras */
 }

@@ -1,24 +1,48 @@
-.fatherContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    width: 50%;
-    height: 30rem;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    border: 1px solid #000;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px 2px #111;
-}
-.sonContainer{
-    border-radius: 10px;
-    margin-left: 20px;
-    width: 50%;
-}
-.onClickForm{
-    height: 100%;
+.main{
+
     width: 100%;
+    height: 100%;
+    background-color: #171c24;
+}
+.fatherContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 50%;
+  height: 30rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px 2px #111;
+  background-color: white;
+}
+.sonContainer {
+  border-radius: 10px;
+  margin-left: 20px;
+  width: 50%;
+}
+.onClickForm {
+  height: 100%;
+  width: 100%;
+}
+.textUsers {
+  display: flex;
+  height: 100%;
+  font-size: 1.1rem;
+  margin-left: 20px;
+}
+.containerText {
+  height: 100%;
+  width: 50%;
+  background-color: #6e0000;
+  color: #eee;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.containerText h2{
+    margin-left: 20px;
 }

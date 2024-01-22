@@ -118,3 +118,20 @@ nav ul li a:hover {
     height: 100%;
     width: 100%;
 }
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    50%{
+        transform: translateX(2%);
+        opacity: 0.5;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  .nav .dropdown, .title {
+    animation: 2s ease-out 0s 1 slideInFromLeft;
+  }

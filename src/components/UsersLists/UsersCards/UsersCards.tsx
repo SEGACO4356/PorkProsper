@@ -1,6 +1,6 @@
-import React from 'react'
-import style from './UsersCards.module.css'
-import { useNavigate } from 'react-router-dom';
+import React from "react";
+import style from "./UsersCards.module.css";
+import { useNavigate } from "react-router-dom";
 
 interface User {
   id: Int16Array;
@@ -13,15 +13,17 @@ interface User {
   // incluye aquí cualquier otra propiedad que los usuarios puedan tener
 }
 
-
 const UsersCards: React.FC<{ user: User }> = ({ user }) => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
-    <main>
+    <main className={style.main}>
       <div className={style.fatherContainer}>
-        <div className={style.onClickForm}  onClick={() => {
-            navigate(`/users/${user.id}`)
-          }}>
+        <div
+          className={style.onClickForm}
+          onClick={() => {
+            navigate(`/users/${user.id}`);
+          }}
+        >
           <div className={style.sonContainer}>
             <h1>{user.username}</h1>
             <p>{user.email}</p>
@@ -30,11 +32,10 @@ const UsersCards: React.FC<{ user: User }> = ({ user }) => {
             <p>{user.description}</p>
           </div>
         </div>
-
       </div>
       <hr />
     </main>
-  )
-}
+  );
+};
 
-export default UsersCards
+export default UsersCards;

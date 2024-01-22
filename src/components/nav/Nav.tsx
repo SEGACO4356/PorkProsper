@@ -89,7 +89,7 @@ const DropDownItem = (props: any) => {
         <a>{props.text}</a>
         {isOpen && (
           <ul>
-            <li className={style.dropdownItem}><Link to="/users">Ver Usuarios</Link></li>
+            <li className={style.dropdownItem}><Link to="/users">Ver Socios</Link></li>
             <li className={style.dropdownItem}><Link to="/create-user">Crear Usuario</Link></li>
           </ul>
         )}
