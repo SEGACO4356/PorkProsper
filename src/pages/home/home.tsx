@@ -1,8 +1,12 @@
 import style from "./home.module.css";
-import primerCerdo from "../../assets/CerdoInicio-removebg-preview.png";
 import segundoCerdo from "../../assets/PorkProsperAnimate.jpeg";
 
 const Home = () => {
+
+  const img = {
+    MeatImgage: "https://nuevo-group.gr/wp-content/uploads/2021/05/paragontes-pou-epireazoun-tin-poiotita-tou-xoirinou-kreatos.jpg"
+  }
+
   return (
     <>
       <main className={style.main}>
@@ -12,6 +16,7 @@ const Home = () => {
         <h1 className={style.title}>PorkProsper</h1>
         <div className={style.firstContainer}>
           <div className={style.containerSon}>
+            <img src={img.MeatImgage} className={style.firstPigImg} alt="" />
             <p className={style.principaltext}>
               Descubre la excelencia en la cría porcina con PorkProsper, la
               empresa líder en la venta de cerdos de alta calidad. En
@@ -45,16 +50,9 @@ const Home = () => {
               <hr />
              ¡Prueba PorkProsper!
             </p>
-
-            <img
-              src={primerCerdo}
-              alt="Cerdo"
-              className={style.primerCerdoImg}
-            />
           </div>
         </div>
         <div className={style.containerSonTwo}>
-          <img src={segundoCerdo} className={style.secondPigImg} alt="" />
           <p className={style.secondText}>
           <h2>Sabías que?</h2>
             PorkProsper se destaca como una de las principales distribuidoras de
@@ -67,6 +65,8 @@ const Home = () => {
             aquellos que buscan carne de alta calidad y confiabilidad en la
             distribución.
           </p>
+          <img src={segundoCerdo} className={style.secondPigImg} alt="" />
+
         </div>
       </main>
     </>

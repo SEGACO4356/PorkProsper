@@ -77,7 +77,7 @@ const DropDownItem = (props: any) => {
         <a>{props.text}</a>
         {isOpen && (
           <ul>
-            <li className={style.dropdownItem}><a href="">Categorias</a></li>
+            <li className={style.dropdownItem}><Link to="/categories">Categorias</Link></li>
           </ul>
         )}
       </div>
