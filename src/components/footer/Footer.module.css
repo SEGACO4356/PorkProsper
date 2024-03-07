@@ -1,0 +1,10 @@
+main{
+    height: 100%;
+    width: 100%;
+}
+.footer{
+    height: 100%;
+    width: 100%;
+    background-color: #171c24;
+    padding-top: 1px;
+}

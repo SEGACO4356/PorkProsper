@@ -5,6 +5,7 @@ import Nav from "./components/nav/Nav";
 import TasksPage from "./pages/Users/UsersPage/UsersPage";
 import UsersFormPage from "./pages/Users/UsersFormPage/UsersFormPage";
 import Categories from "./pages/categories/categories";
+import Footer from "./components/footer/Footer"
 import { Toaster } from "react-hot-toast";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path="/categories" element={<Categories/>} />
       </Routes>
       <Toaster />
+      <Footer />
     </Router>
   );
 }

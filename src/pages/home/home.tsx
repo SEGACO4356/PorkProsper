@@ -1,10 +1,14 @@
 import style from "./home.module.css";
 import segundoCerdo from "../../assets/PorkProsperAnimate.jpeg";
+import { Link } from "react-router-dom";
 
 const Home = () => {
 
-  const img = {
-    MeatImgage: "https://nuevo-group.gr/wp-content/uploads/2021/05/paragontes-pou-epireazoun-tin-poiotita-tou-xoirinou-kreatos.jpg"
+  const images = {
+    MeatImgage: "https://nuevo-group.gr/wp-content/uploads/2021/05/paragontes-pou-epireazoun-tin-poiotita-tou-xoirinou-kreatos.jpg",
+    SecongMeatImage: "https://www.beckandbulow.com/cdn/shop/articles/Untitled-design-132-page-001-min-scaled_2560x.jpg?v=1678886725",
+    PietrainImgae: "https://www.nucleus-sa.com/media/pietrain__098494900_1745_06062018.png",
+    DurocPig: "https://www.polsus.pl/images/photos/ms/rasy/330xNxduroc.png.pagespeed.ic.lEED7LzVax.png"
   }
 
   return (
@@ -16,7 +20,7 @@ const Home = () => {
         <h1 className={style.title}>PorkProsper</h1>
         <div className={style.firstContainer}>
           <div className={style.containerSon}>
-            <img src={img.MeatImgage} className={style.firstPigImg} alt="" />
+            <img src={images.MeatImgage} className={style.firstPigImg} alt="" />
             <p className={style.principaltext}>
               Descubre la excelencia en la cría porcina con PorkProsper, la
               empresa líder en la venta de cerdos de alta calidad. En
@@ -66,7 +70,11 @@ const Home = () => {
             distribución.
           </p>
           <img src={segundoCerdo} className={style.secondPigImg} alt="" />
-
+        </div>
+        <div className={style.containerSonThree}>
+          <img className={style.pietrainPig} src={images.PietrainImgae} alt="" />
+          <Link className={style.categories} to="/categories">¡Conoce más de nuestras razas porcinas aquí!</Link>
+          <img className={style.durocPig} src={images.DurocPig} alt="" />
         </div>
       </main>
     </>
